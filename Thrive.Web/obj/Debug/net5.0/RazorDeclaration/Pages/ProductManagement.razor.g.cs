@@ -141,6 +141,11 @@ using Thrive.AdminPortal.Pages;
         StateHasChanged();
     }
 
+    private void UpdateView()
+    {
+        StateHasChanged();
+    }
+
 #line default
 #line hidden
 #nullable disable

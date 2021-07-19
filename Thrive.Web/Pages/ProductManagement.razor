@@ -3,7 +3,7 @@
 
 @using Thrive.AdminPortal.Pages
 
-<ManageProduct></ManageProduct>
+<ManageProduct OnSave="UpdateView"></ManageProduct>
 
 
 
@@ -12,6 +12,11 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        StateHasChanged();
+        UpdateView();
+    }
+
+    private void UpdateView()
+    {
+        base.StateHasChanged();
     }
 }

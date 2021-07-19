@@ -130,7 +130,8 @@ using Thrive.UseCases.ViewProduct;
     string ExceptionMessage { get; set; } = string.Empty;
     private string AuthToken { get; set; }
     Product _itemToDelete;
-
+    [Parameter]
+    public EventCallback<string> OnSave { get; set; }
 
     private ObservableCollection<Product> _products;
 
@@ -292,6 +293,12 @@ using Thrive.UseCases.ViewProduct;
     }
 
     protected List<string> Categories = new List<string>() { "maybelline", "Test", "third" };
+
+    private void UpdateView()
+    {
+        OnSave.InvokeAsync();
+    }
+
 
 #line default
 #line hidden
