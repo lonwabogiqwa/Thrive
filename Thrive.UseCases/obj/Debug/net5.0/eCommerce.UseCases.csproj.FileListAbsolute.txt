@@ -1,0 +1,15 @@
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\eCommerce.UseCases.deps.json
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\eCommerce.UseCases.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\ref\eCommerce.UseCases.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\eCommerce.UseCases.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\bin\Debug\net5.0\eCommerce.Core.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.csproj.AssemblyReference.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.AssemblyInfoInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.AssemblyInfo.cs
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.csproj.CopyComplete
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\ref\eCommerce.UseCases.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.UseCases\obj\Debug\net5.0\eCommerce.UseCases.pdb

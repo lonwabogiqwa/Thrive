@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "eCommerce.UseCases/1.0.0": {
+        "dependencies": {
+          "eCommerce.Core": "1.0.0"
+        },
+        "runtime": {
+          "eCommerce.UseCases.dll": {}
+        }
+      },
+      "eCommerce.Core/1.0.0": {
+        "runtime": {
+          "eCommerce.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "eCommerce.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eCommerce.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

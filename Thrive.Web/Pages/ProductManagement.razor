@@ -1,0 +1,17 @@
+﻿@page "/manage"
+@attribute [Authorize(Roles = "Administrators")]
+
+@using Thrive.AdminPortal.Pages
+
+<ManageProduct></ManageProduct>
+
+
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        StateHasChanged();
+    }
+}

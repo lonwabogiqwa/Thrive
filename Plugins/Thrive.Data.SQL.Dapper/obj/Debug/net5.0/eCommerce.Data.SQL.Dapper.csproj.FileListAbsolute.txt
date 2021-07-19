@@ -1,0 +1,17 @@
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.Data.SQL.Dapper.deps.json
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.Data.SQL.Dapper.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\ref\eCommerce.Data.SQL.Dapper.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.Data.SQL.Dapper.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.UseCases.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.UseCases.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\bin\Debug\net5.0\eCommerce.Core.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.csproj.AssemblyReference.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.AssemblyInfoInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.AssemblyInfo.cs
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.csproj.CoreCompileInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.csproj.CopyComplete
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\ref\eCommerce.Data.SQL.Dapper.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\Plugins\eCommerce.Data.SQL.Dapper\obj\Debug\net5.0\eCommerce.Data.SQL.Dapper.pdb

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Thrive.UseCases/1.0.0": {
+        "dependencies": {
+          "Thrive.Core": "1.0.0"
+        },
+        "runtime": {
+          "Thrive.UseCases.dll": {}
+        }
+      },
+      "Thrive.Core/1.0.0": {
+        "runtime": {
+          "Thrive.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Thrive.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Thrive.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

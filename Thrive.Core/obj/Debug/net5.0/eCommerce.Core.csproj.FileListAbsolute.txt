@@ -1,0 +1,11 @@
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\bin\Debug\net5.0\eCommerce.Core.deps.json
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\bin\Debug\net5.0\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\bin\Debug\net5.0\ref\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\bin\Debug\net5.0\eCommerce.Core.pdb
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.AssemblyInfoInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.AssemblyInfo.cs
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.csproj.CoreCompileInputs.cache
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\ref\eCommerce.Core.dll
+C:\Users\lgiqwa\OneDrive - MineRP\GitHub\eCommerce\eCommerce.Core\obj\Debug\net5.0\eCommerce.Core.pdb

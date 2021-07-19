@@ -1,0 +1,83 @@
+﻿@page "/"
+@using Thrive.Core.Models
+@using Thrive.UseCases.SearchProduct
+@using Thrive.UseCases.ViewProduct
+@using Thrive.Web.Common.Controls
+@using System.Globalization
+@inject ISearchProduct _searchProduct
+@inject IViewProduct _viewProduct
+
+<div style="height:800px">
+
+<div class="default-font" style="float:right; padding-bottom:5px;padding-right:5px"></div>
+<SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+<br/>
+<TelerikGrid Data="@_products"
+             Height="100%" Width="100%" RowHeight="60"
+             Pageable="true"
+             Sortable="true"
+             FilterMode="GridFilterMode.FilterMenu"
+             PageSize="10"
+             Groupable="false"
+             Resizable="true"
+             Reorderable="true">
+    <GridColumns>
+        <GridColumn Field="@nameof(Product.ProductId)" Title="Product Code" />
+        <GridColumn Field="@nameof(Product.Brand)" Title="Category" />
+        <GridColumn Field="@nameof(Product.Name)" Title="Product Name" />
+        <GridColumn Field="@nameof(Product.Description)" Title="DESCRIPTION" />
+        <GridColumn Field="@nameof(Product.Price)" Title="Price">
+            <Template>
+                @((context as Product)?.Price.ToString("C",new CultureInfo("en-ZA")))
+            </Template>
+        </GridColumn>
+        <GridColumn Field="@nameof(Product.Image)" Title="Image Link">
+            <Template>
+                @{
+                    var product = context as Product;
+                }
+                @if (product?.Image != null)
+                {
+                    var base64Image = Convert.ToBase64String(product.Image);
+                    <img src="@($"data:image/gif;base64,{base64Image}")" alt="@product.Name" />
+                }
+                   
+            </Template>
+        </GridColumn>
+
+       
+    </GridColumns>
+
+</TelerikGrid>
+
+</div>
+
+@code {
+    private IEnumerable<Product> _products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _products = _searchProduct.Execute();
+    }
+
+    private void HandleSearch(string filter)
+    {
+        _products = _searchProduct.Execute(filter);
+    }
+
+     Product FetchProduct(int id)
+    {
+      var  product= _viewProduct.Execute(id);
+         return product;
+
+    }
+
+    private void RowClickAction(Product obj)
+    {
+         _viewProduct.Execute(obj.ProductId);
+       
+    }
+
+}

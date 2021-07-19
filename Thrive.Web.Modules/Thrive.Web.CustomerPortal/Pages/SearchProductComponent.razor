@@ -1,0 +1,65 @@
+﻿@page "/products"
+@using Thrive.Web.Common.Controls
+
+@inject ISearchProduct _searchProduct
+
+<h3>Search Products</h3>
+
+<br/>
+
+<SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
+
+<br/>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Image
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (_products != null && _products.Any())
+    {
+        @foreach (var product in _products)
+        {
+            <ProductItemComponent Product="product"></ProductItemComponent>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="3">
+                Cannot find products
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+
+    private IEnumerable<Product> _products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _products = _searchProduct.Execute();
+    }
+
+    private void HandleSearch(string filter)
+    {
+        _products = _searchProduct.Execute(filter);
+    }
+
+}

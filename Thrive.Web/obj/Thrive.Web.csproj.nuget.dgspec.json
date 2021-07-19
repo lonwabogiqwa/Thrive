@@ -1,0 +1,459 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web\\Thrive.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\Thrive.Data.SQL.Dapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\Thrive.Data.SQL.Dapper.csproj",
+        "projectName": "Thrive.Data.SQL.Dapper",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\Thrive.Data.SQL.Dapper.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj"
+              },
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj",
+        "projectName": "Thrive.Core",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj",
+        "projectName": "Thrive.UseCases",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Core\\Thrive.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\Thrive.AdminPortal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\Thrive.AdminPortal.csproj",
+        "projectName": "Thrive.AdminPortal",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\Thrive.AdminPortal.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Telerik.UI.for.Blazor": {
+              "target": "Package",
+              "version": "[2.25.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\Thrive.Web.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\Thrive.Web.Common.csproj",
+        "projectName": "Thrive.Web.Common",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\Thrive.Web.Common.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web\\Thrive.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web\\Thrive.Web.csproj",
+        "projectName": "Thrive.Web",
+        "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web\\Thrive.Web.csproj",
+        "packagesPath": "C:\\Users\\lgiqwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lgiqwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/MineRP-Pty-Ltd/Spatial/_packaging/Spatial-Feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\Thrive.Data.SQL.Dapper.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Plugins\\Thrive.Data.SQL.Dapper\\Thrive.Data.SQL.Dapper.csproj"
+              },
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.UseCases\\Thrive.UseCases.csproj"
+              },
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\Thrive.AdminPortal.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.AdminPortal\\Thrive.AdminPortal.csproj"
+              },
+              "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\Thrive.Web.Common.csproj": {
+                "projectPath": "C:\\Users\\lgiqwa\\OneDrive - MineRP\\GitHub\\Thrive\\Thrive.Web.Modules\\Thrive.Web.Common\\Thrive.Web.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "BlazorTable": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Telerik.UI.for.Blazor": {
+              "target": "Package",
+              "version": "[2.25.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

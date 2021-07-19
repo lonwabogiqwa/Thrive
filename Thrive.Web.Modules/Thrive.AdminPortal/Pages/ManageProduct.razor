@@ -1,0 +1,307 @@
+﻿
+@using System.Collections.ObjectModel
+@using System.Globalization
+@using System.IO
+@using Thrive.Core.Models
+@using Thrive.UseCases.AdminPortal.ManageProducts
+@using Microsoft.Extensions.Logging
+
+@using Thrive.UseCases.SearchProduct
+@using Thrive.UseCases.ViewProduct
+@inject ISearchProduct _searchProduct
+@inject IViewProduct _viewProduct
+@inject IManageProduct _manageProduct
+
+<div style="height:800px">
+
+    <div class="default-font" style="float:right; padding-bottom:5px;padding-right:5px"></div>
+    <div><TelerikButton OnClick="@( () => SelectProduct(null) )" Icon="add">Add Product</TelerikButton></div>
+    <br />
+    <br />
+    <TelerikGrid Data="@_products"
+                 Height="100%" Width="100%" RowHeight="60"
+                 Pageable="true"
+                 Sortable="true"
+                 FilterMode="GridFilterMode.FilterMenu"
+                 PageSize="10"
+                 Groupable="false"
+                 Resizable="true"
+                 Reorderable="true">
+        <GridColumns>
+            <GridColumn Field="@nameof(Product.ProductId)" Title="Product Code" />
+            <GridColumn Field="@nameof(Product.Brand)" Title="Category" />
+            <GridColumn Field="@nameof(Product.Name)" Title="Product Name" />
+            <GridColumn Field="@nameof(Product.Description)" Title="DESCRIPTION" />
+            <GridColumn Field="@nameof(Product.Price)" Title="Price">
+                <Template>
+                    @((context as Product)?.Price.ToString("C",new CultureInfo("en-ZA")))
+                </Template>
+            </GridColumn>
+            <GridColumn Field="@nameof(Product.Image)" Title="Image Link">
+                <Template>
+                    @{
+                        var product = context as Product;
+                    }
+                    @if (product?.Image != null)
+                    {
+                        var base64Image = Convert.ToBase64String(product.Image);
+                        <img src="@($"data:image/gif;base64,{base64Image}")" alt="@product.Name" />
+                    }
+                   
+                </Template>
+            </GridColumn>
+
+            <GridCommandColumn Width="200px" Title="ACTIONS">
+                <GridCommandButton OnClick="@((args)=> SelectProduct(args.Item as Product))" Icon="edit">Edit</GridCommandButton>
+                <GridCommandButton Command="Delete" OnClick="@DeleteWithConfirmation" Icon="delete">Delete</GridCommandButton>
+            </GridCommandColumn>
+
+        </GridColumns>
+
+    </TelerikGrid>
+
+    <TelerikWindow Visible="@(_selectedProduct != null)" Modal="true" Width="500px" Class="hub-form-dialog">
+        <WindowTitle>
+            @{
+                if (_selectedProduct != null && _selectedProduct.ProductId == 0)
+                {
+                    <strong>Add Product</strong>
+                }
+                else
+                {
+                    <strong>Edit Product</strong>
+                }
+            }
+        </WindowTitle>
+        <WindowActions>
+            <WindowAction Name="Minimize" />
+            <WindowAction Name="Maximize" />
+            <WindowAction Name="Close" />
+        </WindowActions>
+        <WindowContent>
+
+            <EditForm EditContext="@EditContext" OnValidSubmit="@Save">
+                <DataAnnotationsValidator />
+                @if (_exceptionMessageVisible)
+                {
+                    <label style="color: red">@ExceptionMessage</label>
+                }
+                <div class="form-group">
+                    <div class="col">
+                        <label for="description" style="padding-top: 5px;">Category</label>
+                        <TelerikDropDownList Data="@Categories" @bind-Value="_selectedProduct.Brand" DefaultText="Select Category)">
+                        </TelerikDropDownList>
+                        <ValidationMessage For="@(() => _selectedProduct.Brand)"></ValidationMessage>
+                    </div>
+                    <div class="col">
+                        <label for="description" style="padding-top: 5px;">Product Name</label>
+                        <TelerikTextBox @bind-Value="@_selectedProduct.Name" Id="name" Title="Product Name" Class="form-control"></TelerikTextBox>
+                        <ValidationMessage For="@(() => _selectedProduct.Name)"></ValidationMessage>
+                    </div>
+                    <div class="col">
+                        <label for="description" style="padding-top: 5px;">Price</label>
+                        <TelerikNumericTextBox Format="C" @bind-Value="@_selectedProduct.Price" Id="price" Class="form-control">
+                        </TelerikNumericTextBox>
+                        <ValidationMessage For="@(() => _selectedProduct.Price)"></ValidationMessage>
+                    </div>
+                    <div class="col">
+                        <label for="description" style="padding-top: 5px;">DESCRIPTION</label>
+                        <TelerikTextBox @bind-Value="@_selectedProduct.Description" Id="description" Title="Description" Class="form-control"></TelerikTextBox>
+                        <ValidationMessage For="@(() => _selectedProduct.Description)"></ValidationMessage>
+                    </div>
+                    <div class="col">
+                        <label for="description" style="padding-top: 5px;">Image</label> <br/>
+                      <InputFile OnChange="@UploadImage"></InputFile>
+                       
+                        <ValidationMessage For="@(() => _selectedProduct.Image)"></ValidationMessage>
+                    </div>
+
+                </div>
+                <hr class="editor-line" />
+                <div class="form-group float-right" style="margin-right:15px">
+                    <TelerikButton Icon="save" Primary="true" ButtonType="@ButtonType.Submit">Save</TelerikButton>
+                    <TelerikButton Icon="cancel" OnClick="@ClearSelection" ButtonType="@ButtonType.Button">Cancel</TelerikButton>
+                </div>
+            </EditForm>
+        </WindowContent>
+    </TelerikWindow>
+    <ConfirmWindow OnConfirm="@DeleteCallback" Visible="@( _itemToDelete != null )" OnCancel="@( _ => _itemToDelete = null )"
+                   ConfirmText="@( $"Are you sure you want to delete {_itemToDelete?.Description}" )"
+                   ConfirmTitle="Delete confirmation" />
+
+</div>
+
+@code {
+
+
+    private ObservableCollection<Product> Products { get; set; }
+    private Product _selectedProduct;
+    Product OriginalProduct { get; set; }
+    private EditContext EditContext { get; set; }
+    bool _exceptionMessageVisible;
+    string ExceptionMessage { get; set; } = string.Empty;
+    private string AuthToken { get; set; }
+    Product _itemToDelete;
+
+
+    private ObservableCollection<Product> _products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _products = _searchProduct.Execute();
+        StateHasChanged();
+    }
+
+    private void HandleSearch(string filter)
+    {
+        _products = _searchProduct.Execute(filter);
+    }
+
+    /// <summary>
+    /// Tracks selected role item
+    /// </summary>
+    /// <param name="item"></param>
+    void SelectProduct(Product item)
+    {
+        if (item != null)
+        {
+            OriginalProduct = item; //we keep a reference to the original item so we don't change it immediately, in case the uses clickc Cancel
+            _selectedProduct = new Product()
+            {
+                ProductId = OriginalProduct.ProductId,
+                Name = OriginalProduct.Name,
+                Description = OriginalProduct.Description,
+                Brand = OriginalProduct.Brand,
+                Price = OriginalProduct.Price,
+                Image = OriginalProduct.Image
+            };
+        }
+        else
+        {
+            _selectedProduct = new Product() { ProductId = 0 };
+        }
+
+        EditContext = new EditContext(_selectedProduct);
+        StateHasChanged();
+    }
+
+    /// <summary>
+    /// Save new role
+    /// </summary>
+    async void Save()
+    {
+
+        if (OriginalProduct != null)
+        {
+
+            try
+            {
+                _manageProduct.UpdateProduct(_selectedProduct);
+
+
+            }
+            catch (Exception e)
+            {
+                ExceptionMessage = "Failed to save role. Please contact your system Administrator";
+                _exceptionMessageVisible = true;
+                return;
+            }
+
+
+        }
+        else
+        {
+            if (Products != null && Products.Any(x => x.ProductId == _selectedProduct.ProductId))
+            {
+                ExceptionMessage = "This Product already exists";
+                _exceptionMessageVisible = true;
+                return;
+            }
+            try
+            {
+
+                var product = _manageProduct.Execute(_selectedProduct);
+                if (product.ProductId > 0)
+                {
+                    _selectedProduct.ProductId = product.ProductId;
+                    Products?.Insert(0, _selectedProduct);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionMessage = "Failed to save Product. Please contact your system Administrator";
+                _exceptionMessageVisible = true;
+
+                return;
+            }
+        }
+
+
+
+        ClearSelection();
+        StateHasChanged();
+    }
+
+    void ClearSelection()
+    {
+        OriginalProduct = _selectedProduct = null;
+        ExceptionMessage = string.Empty;
+    }
+
+
+
+
+    /// <summary>
+    /// Deletes selected role
+    /// </summary>
+    /// <param name="product"></param>
+    /// <returns></returns>
+    private  void DeleteProduct(Product product)
+    {
+
+        try
+        {
+            if (product != null)
+            {
+                _manageProduct.DeleteProduct(product.ProductId);
+            }
+        }
+        catch (Exception e)
+        {
+            ExceptionMessage = "Failed to delete role. Please contact your system Administrator";
+            _exceptionMessageVisible = true;
+            return;
+        }
+
+        _products.Remove(product);
+
+        StateHasChanged();
+    }
+    void DeleteWithConfirmation(GridCommandEventArgs args)
+    {
+        args.IsCancelled = true;//prevent the built-in delete operation from firing
+        _itemToDelete = args.Item as Product;
+    }
+
+     void DeleteCallback()
+    {
+        if (_itemToDelete != null)
+        {
+             DeleteProduct(_itemToDelete);
+            _itemToDelete = null;
+        }
+        StateHasChanged();
+    }
+
+    private async Task UploadImage(InputFileChangeEventArgs e)
+    {
+        MemoryStream ms = new MemoryStream();
+        await e.File.OpenReadStream().CopyToAsync(ms);
+        var bytes = ms.ToArray();
+        _selectedProduct.Image = bytes;
+    }
+
+    protected List<string> Categories = new List<string>() { "maybelline", "Test", "third" };
+}

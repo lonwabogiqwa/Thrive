@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\lgiqwa\OneDrive - MineRP\GitHub\Thrive\Thrive.Web.Modules\Thrive.Web.CustomerPortal\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Thrive.Web.Common" Path="C:\Users\lgiqwa\OneDrive - MineRP\GitHub\Thrive\Thrive.Web.Modules\Thrive.Web.Common\obj\Debug\net5.0\scopedcss\projectbundle\" />
+  <ContentRoot BasePath="_content/Thrive.Web.Common" Path="C:\Users\lgiqwa\OneDrive - MineRP\GitHub\Thrive\Thrive.Web.Modules\Thrive.Web.Common\wwwroot\" />
+</StaticWebAssets>
